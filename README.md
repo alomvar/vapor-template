@@ -1,13 +1,6 @@
-# Vapor Example
+# Minimal Vapor Project Template
 
-Fork this example project as a boilerplate for working with Vapor.
-
-Check out the [live demo](http://example.qutheory.io) running on Ubuntu.
-
-## Badges
-[![Build Status](https://img.shields.io/travis/qutheory/vapor-example.svg?style=flat-square)](https://travis-ci.org/qutheory/vapor-example)
-[![PRs Welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Slack Status](http://slack.tanner.xyz:8085/badge.svg?style=flat-square)](http://slack.tanner.xyz:8085)
+Clone this repository to get started with a new Vapor project without boilerplate code.
 
 ## Documentation
 
@@ -15,57 +8,24 @@ View [Vapor](https://github.com/qutheory/vapor) for documentation.
 
 ## Requirements
 
-Swift 2.2 or later is required (3.0 or later for certain features).
-
-Works on Ubuntu, Docker, Heroku, OS X
+Requires Swift development snapshot from 25th April 2016 or newer.
 
 ## Building
 
-### Swift 2.2
-
-Visit [Getting Started](https://github.com/qutheory/vapor/wiki/Setup) in the Vapor Wiki for more details about using Swift 2.2.
-
-### Swift 3.0
-
 Check out Kylef's [swiftenv](https://github.com/kylef/swiftenv) for ensuring you have the latest
-version of Swift installed. This project contains a `.swift-version` file which will tell `swiftenv` which version of Swift to build with automatically. 
+version of Swift installed. This project contains a `.swift-version` file which will tell `swiftenv` which version of Swift to build with automatically.
 
 If you dont want to use `swiftenv`, visit [Swift.org](http://swift.org) to learn more about installing development snapshots on your system.
 
-### Vapor CLI
-
-The Vapor Command Line Interface makes it easy to build and run Vapor projects. Install it on Mac by running 
-
-```sh
-brew tap qutheory/tap
-brew install vapor
-vapor help
-```
-
-or on Linux with
-
-```sh
-git clone https://github.com/qutheory/vapor.git
-cd vapor
-sudo cp vapor /usr/local/bin/vapor
-cd ../
-rm -rf vapor
-vapor help
-```
-
 ### Compiling
 
-If you have the Vapor CLI, use `vapor new <project-name>` to create your new application.
+Run `vapor build` and `vapor run`.
 
-Then run `vapor build` and `vapor run`.
-
-Otherwise, clone this repo and run `swift build` to compile your application, then run `.build/debug/App`. 
+Otherwise, clone this repo and run `swift build` to compile your application, then run `.build/debug/App`.
 
 ### Xcode 7.3
 
-Open the `VaporApp.xcodeproj` with Xcode 7.3 and make sure Xcode > Toolchains is set to `swift-DEVELOPMENT-SNAPSHOT-2016-03-24-a.xctoolchain` or later. 
-
-![Xcode](https://cloud.githubusercontent.com/assets/1342803/14158906/d53931be-f6a0-11e5-8282-02ab8cda31a9.png)
+Open the `VaporApp.xcodeproj` with Xcode 7.3 and make sure Xcode > Toolchains is set to `swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a.xctoolchain` or later.
 
 ## Deploying
 
@@ -75,21 +35,21 @@ Check the [Vapor](https://github.com/qutheory/vapor) documentation for more in-d
 
 To start your `Vapor` site automatically when the server is booted, add this file to your server.
 
-`/etc/init/vapor-example.conf`
+`/etc/init/vapor-template.conf`
 
 ```conf
-description "Vapor Example"
+description "Vapor Template"
 
 start on startup
 
-exec /home/<user_name>/vapor-example/.build/release/App --workDir=/home/<user_name>/vapor-example
+exec /home/<user_name>/vapor-template/.build/release/App --workDir=/home/<user_name>/vapor-template
 ```
 
 You additionally have access to the following commands for starting and stopping your server.
 
 ```shell
-sudo stop vapor-example
-sudo start vapor-example
+sudo stop vapor-template
+sudo start vapor-template
 ```
 
 The following script is useful for upgrading your website.
@@ -97,20 +57,16 @@ The following script is useful for upgrading your website.
 ```shell
 git pull
 swift build --configuration release
-sudo stop vapor-example
-sudo start vapor-example
+sudo stop vapor-template
+sudo start vapor-template
 ```
-
-### Heroku / Swifton.me
-
-[![Deploy to Swifton.me](https://serve.swifton.me/badge.png)](https://serve.swifton.me/oneclick?repository=https://github.com/tannernelson/vapor-example)
 
 ### Docker
 You can run this demo application locally in a Linux environment using Docker.
 
 1. Ensure [Docker](https://www.docker.com) is installed on your local machine.
 2. Start the Docker terminal
-3. cd into `vapor-example`
+3. cd into `vapor-template`
 4. Build the container `docker build -t vapor .`
 5. Run the container `docker run -it -p 8080:8080 vapor`
 5. Configure VirtualBox to [forward ports 8080 to 8080](https://www.virtualbox.org/manual/ch06.html)
