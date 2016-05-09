@@ -8,7 +8,7 @@ View [Vapor](https://github.com/qutheory/vapor) for documentation.
 
 ## Requirements
 
-Requires Swift development snapshot from 25th April 2016 or newer.
+Requires Swift development snapshot from 3rd May 2016 or newer.
 
 ## Building
 
@@ -25,7 +25,7 @@ Otherwise, clone this repo and run `swift build` to compile your application, th
 
 ### Xcode 7.3
 
-Open the `VaporApp.xcodeproj` with Xcode 7.3 and make sure Xcode > Toolchains is set to `swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a.xctoolchain` or later.
+Open the `VaporApp.xcodeproj` with Xcode 7.3 and make sure Xcode > Toolchains is set to `swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.xctoolchain` or later.
 
 ## Deploying
 
